@@ -51,6 +51,11 @@
     margin: 0;
 }
 
+.button button_type_EditButton {
+    width: 24px;
+    height: 24px;
+}
+
 .profile__Info_subtitle{
     width: 415px;
     font-weight: 400;
@@ -58,6 +63,16 @@
     line-height: 22px;
     margin: 0;
 }
+
+.button button_type_AddButton {
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    border-color: white;
+    border-radius: 1px;
+}
+
+
 
 .form__submit-btn {
     width: 24px;
@@ -72,8 +87,9 @@
 }
 
 .form__submit-btn_action_reset{
-    
+
 }
+
 
 .elements {
     width: 880px;
@@ -113,6 +129,44 @@
 
 .element__like {
     
+}
+
+.container {
+    background-color: white;
+    width: 430px;
+    height: 330px;
+}
+
+.popup {
+
+}
+
+.SubmitButton {
+
+}
+
+.profile__edit {
+    color: black;
+    font-weight: 900;
+    font-size: 24px;
+    line-hight: 29px;
+    align-items: left;
+}
+
+.popup__form {
+
+}
+
+.form__submit-bt form__submit-btn_action_add {
+    width: 358px;
+    height: 50px;
+    background-color: black;
+}
+
+.form__submit-btn form__submit-btn_action_reset {
+    width: 40px;
+    height: 40px;
+    background-color: black;
 }
 
 .footer {

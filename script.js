@@ -22,3 +22,20 @@ function handleFormSubmit(event) {
     form.addEventListener('submit', handleFormSubmit);
 }
 
+const profileName = document.querySelector('.profile__name');
+const profileJob = document.querySelector('.profile__job');
+
+const input Name = document.querySelector('.popup__input_type_name');
+const input Job = document.querySelector('.popup__input_type_job');
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+    profileName.textContent = inputName.value;
+    profileJob.textContent = inputJob.value;
+}
+
+function toggleForm () {
+    inputName.value = profileName.textContent;
+    inputBreed.value = profileJob.textContent;
+    popup.classList.add('.popup_visible');
+}

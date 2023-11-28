@@ -1,7 +1,6 @@
 .page {
     background-color: black;
-    font-family: Inter;
-    width: 1280px;
+    font-family: Inter;    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -178,4 +177,21 @@
     text-align: left;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button_type_add-place {
+    width: 150px;
+    height: 50px;
+}
+
+.element__like {
+    border: none;
+    background: none;
+    cursor: pointer;
 }

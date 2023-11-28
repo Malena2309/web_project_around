@@ -1,0 +1,123 @@
+.page {
+    background-color: black;
+    font-family: Inter;
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    width: 880px;
+    height: 74px;
+    border-bottom-width: 1 px;
+    border-bottom-color: #545454;
+    margin-top: 45px;
+}
+
+.header__vector {
+    width: 173px;
+    height: 33px;
+    
+}
+
+.profile {
+    width: 880px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.profile__avatar {
+    width: 120px;
+    height: 120px;
+}
+
+.profile__Info {
+    width: 415px;
+    height: 77px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.profile__Info_title{
+    width: 373px;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 48px;
+    margin: 0;
+}
+
+.profile__Info_subtitle{
+    width: 415px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.profile__EditButton {
+    width: 24px;
+    height: 24px;
+}
+
+.profile__AddButton {
+    width: 150px;
+    height: 50px;
+    border-radius: 2px;
+    color: #FFFFFF;
+}
+
+.elements {
+    width: 880px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+
+.element {
+    width: 282px;
+    height: 362px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.element__image {
+    width: 282px;
+    height: 282px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.element__text {
+    width: 246px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: black;
+    text-align: left;
+}
+
+.element__like {
+    
+}
+
+.footer {
+    width: 318px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

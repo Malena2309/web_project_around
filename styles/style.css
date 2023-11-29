@@ -33,7 +33,7 @@
     height: 120px;
 }
 
-.profile__Info {
+.profile__info {
     width: 415px;
     height: 77px;
     color: #FFFFFF;
@@ -42,7 +42,7 @@
 
 }
 
-.profile__Info_title{
+.profile__name{
     width: 373px;
     font-weight: 500;
     font-size: 42px;
@@ -50,12 +50,7 @@
     margin: 0;
 }
 
-.button button_type_EditButton {
-    width: 24px;
-    height: 24px;
-}
-
-.profile__Info_subtitle{
+.profile__job{
     width: 415px;
     font-weight: 400;
     font-size: 18px;
@@ -63,32 +58,18 @@
     margin: 0;
 }
 
-.button button_type_AddButton {
+.button button_type_edit-profile {
+    width: 24px;
+    height: 24px;
+}
+
+.button button_type_add-place {
     width: 150px;
     height: 50px;
     background-color: black;
     border-color: white;
     border-radius: 1px;
 }
-
-
-
-.form__submit-btn {
-    width: 24px;
-    height: 24px;
-}
-
-.form__submit-btn_action_add {
-    width: 150px;
-    height: 50px;
-    border-radius: 2px;
-    color: #FFFFFF;
-}
-
-.form__submit-btn_action_reset{
-
-}
-
 
 .elements {
     width: 880px;
@@ -124,24 +105,36 @@
     line-height: 29px;
     color: black;
     text-align: left;
+    display: flex;
+    padding: 20;
 }
 
 .element__like {
-    
+    width: 21px;
+    height: 18px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: right;
 }
 
-.container {
+.popup__content {
     background-color: white;
     width: 430px;
     height: 330px;
+    z-index: 1;
 }
-
+/*
 .popup {
-
+    display: none;
 }
+*/
 
-.SubmitButton {
-
+.popup__show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .profile__edit {
@@ -153,19 +146,34 @@
 }
 
 .popup__form {
+    color: black;
+}
+
+.form__eror {
 
 }
 
-.form__submit-bt form__submit-btn_action_add {
+.form__submit-btn form__submit-btn_action_add {
     width: 358px;
     height: 50px;
     background-color: black;
 }
 
-.form__submit-btn form__submit-btn_action_reset {
+.form__submit-btn form__submit-btn_action_close {
     width: 40px;
     height: 40px;
     background-color: black;
+    z-index: 1;
+}
+
+.popup__overlay {
+    opacity: .7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
 }
 
 .footer {
@@ -173,25 +181,8 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    color: white;
+    color: #545454;
     text-align: left;
     margin-top: 40px;
     margin-bottom: 40px;
-}
-
-.button {
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.button_type_add-place {
-    width: 150px;
-    height: 50px;
-}
-
-.element__like {
-    border: none;
-    background: none;
-    cursor: pointer;
 }

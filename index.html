@@ -19,8 +19,8 @@
 
         <div class="profile">
             <img class="profile__avatar" src="images/Avatar.png" alt="">
-            <div class="profile__Info">
-                <h1 class="profile__name">Jacques Cousteau</h1>
+            <div class="profile__info">
+                <p class="profile__name">Jacques Cousteau</p>
                 <button type="button" class="button button_type_edit-profile">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <rect x="0.5" y="0.5" width="23" height="23" stroke="white" />
@@ -29,7 +29,7 @@
                             fill="white" />
                     </svg>
                 </button>
-                <h2 class="profile__job">Explorer</h2>
+                <p class="profile__job">Explorer</p>
             </div>
             <button type="button" class="button button_type_add-place">
                 <svg xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50" fill="none">
@@ -43,63 +43,109 @@
         <ul class="elements">
             <li class="element">
                 <img class="element__image" src="images/YosemiteValley.png" alt="">
-                <p class="element__text">Yosemite Valley</p>
-                <button class="element__like">
+                <p class="element__text">Yosemite Valley <span button class="element__like">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
                         <path d="M18.8005 1.95849L18.8023 1.96024C20.7437 3.88233 20.7462 7.03905 18.8005 8.98466L10.361 17.4238L1.94628 9.00951C1.94569 9.00892 1.94511 9.00832 1.94453 9.00772C1.0188 8.06185 0.5 6.81051 0.5 5.48217C0.5 4.14855 1.00122 2.89987 1.94265 1.95849L1.94266 1.95849L1.94441 1.95672C3.86629 0.0157068 7.02186 0.0131363 8.96748 1.97793L8.96922 1.97967L10.0074 3.01784L10.3646 3.37496L10.7181 3.01425L11.7545 1.95673C13.6994 0.0138381 16.8563 0.014425 18.8005 1.95849Z" stroke="black"/>
-                      </svg>
+                    </svg>
                 </button>
+                </p> 
             </li>
 
             <li class="element">
                 <img class="element__image" src="images/LakeLouise.png" alt="">
                 <p class="element__text">Lake Louise</p>
-                <button class="element__like">&#9829</button>
+                <button class="element__like">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
+                        <path d="M18.8005 1.95849L18.8023 1.96024C20.7437 3.88233 20.7462 7.03905 18.8005 8.98466L10.361 17.4238L1.94628 9.00951C1.94569 9.00892 1.94511 9.00832 1.94453 9.00772C1.0188 8.06185 0.5 6.81051 0.5 5.48217C0.5 4.14855 1.00122 2.89987 1.94265 1.95849L1.94266 1.95849L1.94441 1.95672C3.86629 0.0157068 7.02186 0.0131363 8.96748 1.97793L8.96922 1.97967L10.0074 3.01784L10.3646 3.37496L10.7181 3.01425L11.7545 1.95673C13.6994 0.0138381 16.8563 0.014425 18.8005 1.95849Z" stroke="black"/>
+                    </svg>
+                </button>
             </li>
 
             <li class="element">
                 <img class="element__image" src="images/BaldMountains.png" alt="">
                 <p class="element__text">Bald Mountains</p>
-                <button class="element__like">&#9829</button>
+                <button class="element__like">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
+                        <path d="M18.8005 1.95849L18.8023 1.96024C20.7437 3.88233 20.7462 7.03905 18.8005 8.98466L10.361 17.4238L1.94628 9.00951C1.94569 9.00892 1.94511 9.00832 1.94453 9.00772C1.0188 8.06185 0.5 6.81051 0.5 5.48217C0.5 4.14855 1.00122 2.89987 1.94265 1.95849L1.94266 1.95849L1.94441 1.95672C3.86629 0.0157068 7.02186 0.0131363 8.96748 1.97793L8.96922 1.97967L10.0074 3.01784L10.3646 3.37496L10.7181 3.01425L11.7545 1.95673C13.6994 0.0138381 16.8563 0.014425 18.8005 1.95849Z" stroke="black"/>
+                    </svg>
+                </button>
             </li>
 
             <li class="element">
                 <img class="element__image" src="images/Latemar.png" alt="">
                 <p class="element__text">Latemar</p>
-                <button class="element__like">&#9829</button>
+                <button class="element__like">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
+                        <path d="M18.8005 1.95849L18.8023 1.96024C20.7437 3.88233 20.7462 7.03905 18.8005 8.98466L10.361 17.4238L1.94628 9.00951C1.94569 9.00892 1.94511 9.00832 1.94453 9.00772C1.0188 8.06185 0.5 6.81051 0.5 5.48217C0.5 4.14855 1.00122 2.89987 1.94265 1.95849L1.94266 1.95849L1.94441 1.95672C3.86629 0.0157068 7.02186 0.0131363 8.96748 1.97793L8.96922 1.97967L10.0074 3.01784L10.3646 3.37496L10.7181 3.01425L11.7545 1.95673C13.6994 0.0138381 16.8563 0.014425 18.8005 1.95849Z" stroke="black"/>
+                    </svg>
+                </button>
             </li>
 
             <li class="element">
                 <img class="element__image" src="images/VanoiseNationa.png" alt="">
                 <p class="element__text">Vanoise Nationa...</p>
-                <button class="element__like">&#9829</button>
+                <button class="element__like">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
+                        <path d="M18.8005 1.95849L18.8023 1.96024C20.7437 3.88233 20.7462 7.03905 18.8005 8.98466L10.361 17.4238L1.94628 9.00951C1.94569 9.00892 1.94511 9.00832 1.94453 9.00772C1.0188 8.06185 0.5 6.81051 0.5 5.48217C0.5 4.14855 1.00122 2.89987 1.94265 1.95849L1.94266 1.95849L1.94441 1.95672C3.86629 0.0157068 7.02186 0.0131363 8.96748 1.97793L8.96922 1.97967L10.0074 3.01784L10.3646 3.37496L10.7181 3.01425L11.7545 1.95673C13.6994 0.0138381 16.8563 0.014425 18.8005 1.95849Z" stroke="black"/>
+                    </svg>
+                </button>
             </li>
 
             <li class="element">
                 <img class="element__image" src="images/LagodiBraies.png" alt="">
                 <p class="element__text">Lago di Braies</p>
-                <button class="element__like">&#9829</button>
+                <button class="element__like">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
+                        <path d="M18.8005 1.95849L18.8023 1.96024C20.7437 3.88233 20.7462 7.03905 18.8005 8.98466L10.361 17.4238L1.94628 9.00951C1.94569 9.00892 1.94511 9.00832 1.94453 9.00772C1.0188 8.06185 0.5 6.81051 0.5 5.48217C0.5 4.14855 1.00122 2.89987 1.94265 1.95849L1.94266 1.95849L1.94441 1.95672C3.86629 0.0157068 7.02186 0.0131363 8.96748 1.97793L8.96922 1.97967L10.0074 3.01784L10.3646 3.37496L10.7181 3.01425L11.7545 1.95673C13.6994 0.0138381 16.8563 0.014425 18.8005 1.95849Z" stroke="black"/>
+                    </svg>
+                </button>
             </li>
         </ul>
 
-        <div class="container">
-            <div class="popup">
-                <button type="SubmitButton">Save</button>
-                <h3 class="profile__edit">Edit profile</h3>
+        <section class="popup">
+            <div class="popup__content">
+                <p class="profile__edit">Edit profile</p>
                 <form class="popup__form" name="edit">
                     <input type="text" name="name" placeholder="Name" class="popup__input popup__input_type_name">
+                        <span class="form__error"></span>
                     <input type="text" name="job" placeholder="Job" class="popup__input popup__input_type_job">
-                    <button class="form__submit-btn form__submit-btn_action_add">Save</button>
-                </form>
+                        <span class="form__error"></span>
+                
                 <div class="form__submit">
-                    <button class="form__submit-btn popup__close-button">X</button>
+                    <button class="form__submit-btn form__submit-btn_action_add">
+                        <img class="submit-btn" src="images/Submit_Button.png" alt="">
+                    </button>
                 </div>
+                
+                </form>
             </div>
+        
+        <div class="popup popup_content_add-card">      
+                <div class="popup__overlay"></div>
+                <div class="form__close">
+                    <button class="form__submit-btn form__submit-btn_action_close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                         <path d="M28.5709 0.286517L16.0001 12.8573L3.4293 0.286515L0.286608 3.42921L12.8574 16L0.286608 28.5708L3.4293 31.7135L16.0001 19.1427L28.5709 31.7135L31.7136 28.5708L19.1428 16L31.7136 3.42921L28.5709 0.286517Z" fill="white"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup__content">
+                    <form class="popup__form" name="edit">
+                        <input type="text" name="name" placeholder="Name" class="popup__input popup__input_type_name">
+                            <span class="form__error"></span>
+                        <input type="text" name="job" placeholder="Job" class="popup__input popup__input_type_job">
+                            <span class="form__error"></span>
+                    </form>
+                </div>  
         </div>
+        </section>
+            
 
         <footer class="footer">
             &copy 2023 Around the US
         </footer>
+
+
 
 
 

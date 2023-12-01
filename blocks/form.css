@@ -1,0 +1,39 @@
+.form__submit {
+    margin: 0;
+}
+
+
+.form__submit-btn form__submit-btn_action_add {
+    width: 358px;
+    height: 50px;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    display: block;
+    margin: auto;
+    transition: opacity 0.3s ease;
+}
+
+.form__submit-btn form__submit-btn_action_add:hover {
+    opacity: 0.8;
+}
+
+
+/* mobile */
+@media screen and (max-width: 767px) and (min-width: 320px) { 
+    
+    .form__submit-btn form__submit-btn_action_add {
+        width: 238px;
+        height: 46px;
+        background-color: black;
+        cursor: pointer;
+        border: none;
+        display: block;
+        margin: auto;
+        transition: opacity 0.3s ease;
+    }
+    
+    .form__submit-btn form__submit-btn_action_add:hover {
+        opacity: 0.8;
+    }
+}

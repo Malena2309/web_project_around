@@ -29,4 +29,4 @@ La página contiene tarjetas con imagen, información de la misma y un botón li
 
 ## Contribución
 - MARIA ELENA RODRIGUEZ SALAZAR
-- git@github.com:Malena2309/web_project_homeland.git
+- git@github.com:Malena2309/web_project_around.git

@@ -188,7 +188,7 @@
     background: none;
     border: none;
     margin-left: 460px;
-    transtion: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .popup__button-close:hover {

@@ -56,7 +56,6 @@
 
     .profile {
         width: 282px;
-        color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -64,19 +63,10 @@
         margin-bottom: 25px;
     }
     
-    .profile__avatar {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 45px;
-    }
-    
     .profile__info {
         width: 282px;
-        color: #FFFFFF;
-        display: flex;
         justify-content: center;
-        align-items:center;
-        flex-direction: column;
+        align-items:center;    
     }
     
     .profile__info-title {
@@ -105,13 +95,8 @@
     }
 
     .profile__edit {
-        color: black;
-        font-weight: 900;
         font-size: 18px;
         line-height: 29px;
-        align-items: left;
-        padding-left: 20px;
-        margin-bottom: 60px;
     }
     
 }

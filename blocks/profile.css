@@ -17,12 +17,13 @@
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
-
+    padding-top: 25px;
 }
 
 .profile__info-title {
     display: flex;
     margin-top: 25px;
+    align-items: center;
 }
 
 .profile__name{

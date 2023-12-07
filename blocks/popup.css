@@ -13,8 +13,10 @@
 
 .popup__input {
     border: none;
-    padding-left: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    width: 358px;
+    height: 28px;
+    border-bottom: 1px solid lightgrey;
 }
 
 
@@ -34,8 +36,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vw;
+    width: 100%;
+    height: 100vh;
 }
 
 .popup__button-close {
@@ -53,6 +55,9 @@
 
 .popup__form {
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -67,5 +72,13 @@
         z-index: 1;
         display: flex;
         flex-direction: column;
+    }
+
+    .popup__input {
+        width: 238px;
+    }
+
+    .popup__button-close {
+        margin-left: 250px;
     }
 }

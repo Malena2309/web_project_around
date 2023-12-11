@@ -24,6 +24,7 @@
     display: flex;
     margin-top: 25px;
     align-items: center;
+    margin: 0;
 }
 
 .profile__name{
@@ -76,7 +77,6 @@
         margin-top: 15px;
         display: flex;
         justify-content: flex-start;
-        margin: 0;
     }
     
     .profile__name {

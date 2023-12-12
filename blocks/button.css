@@ -47,10 +47,15 @@
     height: 50px;
 }
 
+.button_type_edit-profile {
+    width: 50px;
+}
+
 .button-image {
     width: 100%;
     height: 100%;
     overflow: hidden;
 
 }
+
 }

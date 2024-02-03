@@ -35,6 +35,9 @@
             <ul class="elements">
                 <li class="element">
                     <img class="element__image" src="images/YosemiteValley.png" alt="Yosemite Valley">
+                        <button class="element__delete">
+                            <img src="images/Trash.png" class="button-trash" alt="botón de borrar">
+                        </button>
                     <div class="element__info">
                         <p class="element__text">Yosemite Valley</p>
                         <button class="element__like">
@@ -45,6 +48,9 @@
 
                 <li class="element">
                     <img class="element__image" src="images/LakeLouise.png" alt="Lake Louise">
+                        <button class="element__delete">
+                            <img src="images/Trash.png" class="button-trash" alt="botón de borrar">
+                        </button>
                     <div class="element__info">
                         <p class="element__text">Lake Louise</p>
                         <button class="element__like">
@@ -55,6 +61,9 @@
 
                 <li class="element">
                     <img class="element__image" src="images/BaldMountains.png" alt="Bald Mountains">
+                        <button class="element__delete">
+                            <img src="images/Trash.png" class="button-trash" alt="botón de borrar">
+                        </button>
                     <div class="element__info">
                         <p class="element__text">Bald Mountains</p>
                         <button class="element__like">
@@ -65,6 +74,9 @@
 
                 <li class="element">
                     <img class="element__image" src="images/Latemar.png" alt="Latemar">
+                         <button class="element__delete">
+                            <img src="images/Trash.png" class="button-trash" alt="botón de borrar">
+                         </button>
                     <div class="element__info">
                         <p class="element__text">Latemar</p>
                         <button class="element__like">
@@ -75,6 +87,9 @@
 
                 <li class="element">
                     <img class="element__image" src="images/VanoiseNationa.png" alt="Vanoise National Park">
+                        <button class="element__delete">
+                            <img src="images/Trash.png" class="button-trash" alt="botón de borrar">
+                        </button>
                     <div class="element__info">
                         <p class="element__text">Vanoise Nationa...</p>
                         <button class="element__like">
@@ -85,6 +100,9 @@
 
                 <li class="element">
                     <img class="element__image" src="images/LagodiBraies.png" alt="Lagodi Braies">
+                        <button class="element__delete">
+                            <img src="images/Trash.png" class="button-trash" alt="botón de borrar">
+                        </button>
                     <div class="element__info">
                         <p class="element__text">Lago di Braies</p>
                         <button class="element__like">
@@ -116,6 +134,38 @@
                 </div>
                 </form>
             </div>
+        </section>
+
+        <section class="popup popup_content_add-card">
+                <div class="popup__overlay"></div>
+                <button class="popup__button-close">
+                    <img src="images/CloseIcon.png" alt="boton cerrar">
+                </button>
+
+            <div class="popup__content popup__content-image">
+                <p class="add__card">Nuevo lugar</p>
+                <form class="popup__form" name="edit">
+                    <input type="text" name="title" placeholder="Titulo" class="popup__input popup__input_type_title">
+                        <span class="form__error"></span>
+                    <input type="text" name="source" placeholder="Enlace a la imagen" class="popup__input popup__input_type_source">
+                        <span class="form__error"></span>
+                
+                <div class="form__submit">
+                    <button class="form__submit-btn form__submit-btn_action_add">
+                        Save
+                    </button> 
+            </div>
+
+            <template class="template-card">
+                <div class="card">
+                    <img class="card__image" src="" alt="Imagen de un lugar">
+                    <p class="card__text"></p>
+                    <div class="card_actions">
+                        <button class="card__button card__button_action_delete">Borrar</button>event
+                    </div>
+                </div>
+            </template>
+
         </section>
             
 

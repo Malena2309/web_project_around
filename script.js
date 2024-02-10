@@ -36,21 +36,21 @@ const inputName = document.querySelector('.popup__input_type_name');
 const inputJob = document.querySelector('.popup__input_type_job');
 const form = document.querySelector('.popup__form');
 
-const cards = [],
+const cards = [];
 //numero aleatorio de tarjetas que se van a agrear
 const numRandom = Math.round(Math.random() * 10, 0);
 //el contenedor donde vamos a ir agregando las tarjetas
-const cardsArea = document.querySelector ('cards');
+const cardsArea = document.querySelector (".elements");
 
-const button = document.querySelector ('.button');
+const button = document.querySelector (".button");
 
 function toggleForm() {
-    popup.classList.toggle('popup_visible');
+    popup.classList.toggle("popup_visible");
 }
 
-openFormButton.addEventListener('click', toggleForm);
+openFormButton.addEventListener("click", toggleForm);
 
-closeButton.addEventListener('click', toggleForm);
+closeButton.addEventListener("click", toggleForm);
 
 
 function handleFormSubmit(event) {
@@ -61,47 +61,42 @@ function handleFormSubmit(event) {
     toggleForm();
 }
 
-form.addEventListener('submit', handleFormSubmit);
+form.addEventListener("submit", handleFormSubmit);
 
 //funcion crear tarjeta
 function crearTarjeta(item) {
-    const template = document.querySelector('.template-card').textContent.querySelector;
+    const template = document
+    .querySelector(".template-card")
+    .textContent.querySelector (".element");
     //<div class="card">
-    const node = template.cloneElement(true);
+    const node = template.cloneNode(true);
     //<img class=card__image">
-    const nodeImage = node.querySelector('img');
+    const nodeImage = node.querySelector("img");
     //<p class="card__text">
-    const nodeText = node.querySelector('p');
+    const nodeText = node.querySelector("p");
 
-    const buttonDelete = node.querySelector('.card__button_action_delete')
-   
+    const buttonDelete = node.querySelector(".card__button_action_delete");
+
     //agregamos contenido
-    nodeText.textContent = item.text;
+    nodeText.textContent = item.name;
     nodeImage.src = item.link;
     
     return node;
 }
 
-button.addEventListener('click', function(){
+button.addEventListener("click", function () {
     const item = {
         link: "https://psicsum.photos/200/200?r=" + cards.length,
-        text: 'Imagen' + (cards.lenght + 1)
-    }
+        name: "Imagen" + (cards.lenght + 1)
+    };
     cards.push(item);
     const node = crearTarjeta(item);
-    cardsArea.append(node);
+    cardsArea.prepend(node);
 });
 
-for(let i = 0; i<numRandom;i++){
-    const card = {
-        link: 'https://picsum.photos/200/200?r=' + 1,
-        text: 'Imagen' + (i+1)
-    }
-    cards.push(card);
-}
 
-cards.forEach(function(item){
-    const node = crearTarjeta(item);
+initialCards.forEach((values) => {
+    const node = crearTarjeta(values);
     cardsArea.append(node);
-})
+});
 

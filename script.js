@@ -26,15 +26,20 @@ const initialCards = [
   ]; 
 
 //variables
-const addButton = document.querySelector(".button_type_edit-profile");
-const openFormButton = document.querySelector('.button_type_edit-profile');
-const popup = document.querySelector('.popup');
-const closeButton = popup.querySelector('.popup__button-close');
+const addCardButton = document.querySelector(".button_type_add-place");
+const profileFormButton = document.querySelector('.button_type_edit-profile');
+const popupProfile = document.querySelector('.popup');
+const popupCards = document.querySelector('.popup__content_add-card');
+const closeProfileForm = popupProfile.querySelector('.popup__button-close');
+const closeCardsForm = popupCards.querySelector('.popup__button-close');
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__job');
 const inputName = document.querySelector('.popup__input_type_name');
 const inputJob = document.querySelector('.popup__input_type_job');
-const form = document.querySelector('.popup__form');
+const profileForm = document.querySelector('.popup__form');
+const addCardForm = document.querySelector("#add-card-form");
+const cardInputName = document.querySelector("#card-name-input");
+const cardInputLink = document.querySelector("#card-link-input");
 
 const cards = [];
 //numero aleatorio de tarjetas que se van a agrear
@@ -44,30 +49,34 @@ const cardsArea = document.querySelector (".elements");
 
 const button = document.querySelector (".button");
 
-function toggleForm() {
-    popup.classList.toggle("popup_visible");
+function toggleProfileForm() {
+    popupProfile.classList.toggle("popup_visible");
 }
 
-openFormButton.addEventListener("click", toggleForm);
+function toggleAddCardForm() {
+  popupCards.classList.toggle("popup_visible");
+}
 
-closeButton.addEventListener("click", toggleForm);
-
+profileFormButton.addEventListener("click", toggleProfileForm);
+closeProfileForm.addEventListener("click", toggleProfileForm);
+addCardButton.addEventListener("click", toggleAddCardForm);
+closeCardsForm.addEventListener("click", toggleAddCardForm);
 
 function handleFormSubmit(event) {
     event.preventDefault();
     profileName.textContent = inputName.value;
     profileJob.textContent = inputJob.value;
-    form.reset();
-    toggleForm();
+    profileForm.reset();
+    toggleProfileForm();
 }
 
-form.addEventListener("submit", handleFormSubmit);
+profileForm.addEventListener("submit", handleFormSubmit);
 
 //funcion crear tarjeta
-function crearTarjeta(item) {
+function crearTarjeta(name, link) {
     const template = document
     .querySelector(".template-card")
-    .textContent.querySelector (".element");
+    .content.querySelector (".element");
     //<div class="card">
     const node = template.cloneNode(true);
     //<img class=card__image">
@@ -78,25 +87,30 @@ function crearTarjeta(item) {
     const buttonDelete = node.querySelector(".card__button_action_delete");
 
     //agregamos contenido
-    nodeText.textContent = item.name;
-    nodeImage.src = item.link;
+    nodeText.textContent = name;
+    nodeImage.src = link;
     
     return node;
 }
 
-button.addEventListener("click", function () {
-    const item = {
-        link: "https://psicsum.photos/200/200?r=" + cards.length,
-        name: "Imagen" + (cards.lenght + 1)
-    };
-    cards.push(item);
-    const node = crearTarjeta(item);
+addCardForm.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+    const node = crearTarjeta(cardInputName.value, cardInputLink.value);
     cardsArea.prepend(node);
+    toggleAddCardForm();
 });
 
 
 initialCards.forEach((values) => {
-    const node = crearTarjeta(values);
+    const node = crearTarjeta(values.name, values.link);
     cardsArea.append(node);
 });
+
+//   1       2      3     4
+// ['ob1', 'ob2', 'ob3', 'ob4']
+
+// values =     {
+//   name: "Valle de Yosemite",
+//   link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg"
+// },
 

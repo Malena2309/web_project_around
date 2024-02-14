@@ -89,7 +89,7 @@ function crearTarjeta(name, link) {
     //agregamos contenido
     nodeText.textContent = name;
     nodeImage.src = link;
-    
+
     return node;
 }
 
@@ -98,6 +98,8 @@ addCardForm.addEventListener("submit", function (evt) {
     const node = crearTarjeta(cardInputName.value, cardInputLink.value);
     cardsArea.prepend(node);
     toggleAddCardForm();
+    //limpiar el formulario
+    addCardForm.reset();
 });
 
 
@@ -106,11 +108,50 @@ initialCards.forEach((values) => {
     cardsArea.append(node);
 });
 
-//   1       2      3     4
-// ['ob1', 'ob2', 'ob3', 'ob4']
+//para activar el botón like 
+document.addEventListener('DOMContentLoaded', () => {
+    const likeButtons = document.querySelectorAll('.element__like');
 
-// values =     {
-//   name: "Valle de Yosemite",
-//   link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg"
-// },
+    likeButtons.forEach(button => {
+       button.addEventListener('click', function() {
+        const img = this.querySelector('img');
+            if (img.src.includes('likebutton.png')) {
+                img.src = 'images/blackheart.png'; 
+            } else {
+                img.src = 'images/likebutton.png'; 
+            }
+        });
+    });
+});
 
+//Funcionalidad de borrado de tarjeta
+document.addEventListener('DOMContentLoaded', () => {
+       document.querySelectorAll('.element__delete').forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.element');
+            if (card) {
+                card.remove();
+            }
+        });
+    });
+});
+
+//Mecanismo de ventanas emergentes
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.element__image');
+
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            const popup = document.getElementById('imagePopup');
+            const popupImage = popup.querySelector('.popup__image');
+            popupImage.src = this.src; // Establece la imagen del popup como la imagen clickeada
+            popupImage.alt = this.alt; // Opcional: copia el alt de la imagen original
+            popup.style.display = 'block'; // Muestra el popup
+        });
+    });
+
+    // Cerrar el popup
+    document.querySelector('.popup__close').addEventListener('click', () => {
+        document.getElementById('imagePopup').style.display = 'none';
+    });
+});

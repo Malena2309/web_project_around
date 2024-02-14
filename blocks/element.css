@@ -15,6 +15,22 @@
     overflow: hidden;
 }
 
+.element__delete {
+    width: 18px;
+    height: 19px;
+    border: none;
+    position: absolute;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: right;
+    transition: opacity 0.3s ease;
+}
+
+.element__like:hover {
+    opacity: 0.6; 
+}
+
 .element__info {
     display: flex;
     margin-top: 25px;

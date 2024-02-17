@@ -78,8 +78,15 @@
                                 Crear
                             </button> 
                         </div>
-                </input> 
+                    </input> 
                 </form>
+
+                    <div class="popup popup_show" id="popup-image">
+                        <img class= "popup__image" src="https://picsum.photos/200/200" alt="Imagen ampliada">
+                        <h3 class="popup__title">Landscapes</h3>
+                            <img  class="popup-image" src="images/CloseIcon.png" alt="boton cerrar" id="close-image">
+                    </div>
+                
 
             <template class="template-card">
                 <li class="element">
@@ -87,32 +94,22 @@
                     <button class="element__delete">
                         <img src="images/Trash.png" class="button-trash" alt="botón de borrar">
                     </button>
+
                     <div class="element__info">
                         <p class="element__text">Paisaje</p>
-                        <button class="element__like">
-                            <img src="images/likebutton.png" alt="boton like">
-                        </button>
+                            <button class="element__like">
+                            </button>
                     </div>
                 </li>
             </template>
-
-            <div id="imagePopup" class="popup__image">
-                <div class="popup__image_content">
-                    <img src="images/" alt="Imagen ampliada" class="popup__image_big">
-                    <button class="popup__close">cerrar</button>
-                </div>
-            </div>
-
         </section>
-            
+      
 
         <footer class="footer">
             &copy; 2023 Around the US
         </footer>
 
-
-
-
-    </div>
+    </div>   
+    
     <script src="./script.js"></script>
 </body>

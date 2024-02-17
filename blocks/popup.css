@@ -9,6 +9,7 @@
 
 .popup {
     display: none;
+    flex-direction: column;
 }
 
 .popup__input {
@@ -70,6 +71,11 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup__title {
+    display: flex;
+    color: white;
 }
 
 .popup__image_content {

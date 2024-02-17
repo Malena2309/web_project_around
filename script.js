@@ -40,6 +40,10 @@ const profileForm = document.querySelector('.popup__form');
 const addCardForm = document.querySelector("#add-card-form");
 const cardInputName = document.querySelector("#card-name-input");
 const cardInputLink = document.querySelector("#card-link-input");
+const popup__image = document.querySelector("#popup-image");
+const buttonErase = document.querySelector('.popup__button-close');
+const popUpImage = document.querySelector('#popup-image');
+
 
 const cards = [];
 //numero aleatorio de tarjetas que se van a agrear
@@ -72,86 +76,70 @@ function handleFormSubmit(event) {
 
 profileForm.addEventListener("submit", handleFormSubmit);
 
-//funcion crear tarjeta
+//Funcion crear tarjeta
+
 function crearTarjeta(name, link) {
     const template = document
     .querySelector(".template-card")
     .content.querySelector (".element");
-    //<div class="card">
     const node = template.cloneNode(true);
-    //<img class=card__image">
     const nodeImage = node.querySelector("img");
-    //<p class="card__text">
     const nodeText = node.querySelector("p");
 
-    const buttonDelete = node.querySelector(".card__button_action_delete");
-
-    //agregamos contenido
-    nodeText.textContent = name;
-    nodeImage.src = link;
-
-    return node;
-}
-
-addCardForm.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-    const node = crearTarjeta(cardInputName.value, cardInputLink.value);
-    cardsArea.prepend(node);
-    toggleAddCardForm();
-    //limpiar el formulario
-    addCardForm.reset();
-});
+   // Definir buttonLike y button delete
+    const buttonLike = node.querySelector(".element__like");
+    const buttonDelete = node.querySelector(".element__delete");
+    
+    //Imagenes emergentes
+    const popUpImage = node.querySelector('#popup-image');
+    const closeImage = node.querySelector('#close-image');
+    const popupTitle = node.querySelector('.poput__title');
 
 
-initialCards.forEach((values) => {
-    const node = crearTarjeta(values.name, values.link);
-    cardsArea.append(node);
-});
 
-//para activar el botón like 
-document.addEventListener('DOMContentLoaded', () => {
-    const likeButtons = document.querySelectorAll('.element__like');
+    //Activar botón like
+    buttonLike.addEventListener ('click', function() {
+        buttonLike.classList.toggle("element__like_active");
+    })
 
-    likeButtons.forEach(button => {
-       button.addEventListener('click', function() {
-        const img = this.querySelector('img');
-            if (img.src.includes('likebutton.png')) {
-                img.src = 'images/blackheart.png'; 
-            } else {
-                img.src = 'images/likebutton.png'; 
-            }
-        });
-    });
-});
+     //Borrado de tarjeta
+     buttonDelete.addEventListener('click', function() {
+      node.remove();
+      }
+    );
 
-//Funcionalidad de borrado de tarjeta
-document.addEventListener('DOMContentLoaded', () => {
-       document.querySelectorAll('.element__delete').forEach(button => {
-        button.addEventListener('click', function() {
-            const card = this.closest('.element');
-            if (card) {
-                card.remove();
-            }
-        });
-    });
-});
+     //agregamos contenido
+     nodeText.textContent = name;
+     nodeImage.src = link;
+     
+     return node;
+   }
+ 
+   addCardForm.addEventListener("submit", function (evt) {
+     evt.preventDefault();
+     const node = crearTarjeta(cardInputName.value, cardInputLink.value);
+     cardsArea.prepend(node);
+     toggleAddCardForm();
+     //limpiar el formulario
+     addCardForm.reset();
+ });
+ 
+     initialCards.forEach((values) => {
+       const node = crearTarjeta(values.name, values.link);
+       cardsArea.append(node);
+ });
 
-//Mecanismo de ventanas emergentes
-document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.element__image');
 
-    images.forEach(image => {
-        image.addEventListener('click', function() {
-            const popup = document.getElementById('imagePopup');
-            const popupImage = popup.querySelector('.popup__image');
-            popupImage.src = this.src; // Establece la imagen del popup como la imagen clickeada
-            popupImage.alt = this.alt; // Opcional: copia el alt de la imagen original
-            popup.style.display = 'block'; // Muestra el popup
-        });
-    });
 
-    // Cerrar el popup
-    document.querySelector('.popup__close').addEventListener('click', () => {
-        document.getElementById('imagePopup').style.display = 'none';
-    });
-});
+
+
+
+
+
+
+   
+
+    
+
+    
+

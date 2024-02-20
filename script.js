@@ -116,7 +116,7 @@ function crearTarjeta(name, link) {
    //Imagenes emergentes
    const popUpImage = node.querySelector('#popup-image');
    const closeImage = node.querySelector('#close-image');
-   const popupTitle = node.querySelector('.popup__title');
+   const popUpTitle = node.querySelector('.popup__title');
 
 
    function togglepopUpImage(name, link){

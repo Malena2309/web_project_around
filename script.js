@@ -40,7 +40,6 @@ const profileForm = document.querySelector('.popup__form');
 const addCardForm = document.querySelector("#add-card-form");
 const cardInputName = document.querySelector("#card-name-input");
 const cardInputLink = document.querySelector("#card-link-input");
-const popup__image = document.querySelector("#popup-image");
 const buttonErase = document.querySelector('.popup__button-close');
 const popUpImage = document.querySelector('#popup-image');
 
@@ -108,7 +107,7 @@ function crearTarjeta(name, link) {
 
 
 
-     
+
      //definir evento para abrir imagen emergente
     nodeImage.addEventListener('click', function(){
       togglepopUpImage(name,link)
@@ -122,17 +121,17 @@ function crearTarjeta(name, link) {
 
    function togglepopUpImage(name, link){
      popUpImage.src = link
-     popUpTitle.textContent= title
+     popUpTitle.textContent= name
      popUpImage.classList.toggle('popup__show')
    }
 
    function togglecloseImage(){
-     popUpImage.classList.toggle('popup__show')
+     popUpImage.classList.remove('popup__show')
 
    }
 
    closeImage.addEventListener('click', togglecloseImage);
-   cardImage.addEventListener('click', funtion (){
+   nodeImage.addEventListener('click', funtion ({
        handleOpenImage(name, link)
    })
      
@@ -152,18 +151,3 @@ function crearTarjeta(name, link) {
        const node = crearTarjeta(values.name, values.link);
        cardsArea.append(node);
  });
-
-
-
-
-
-
-
-
-
-   
-
-    
-
-    
-

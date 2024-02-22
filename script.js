@@ -40,24 +40,23 @@ const profileForm = document.querySelector('.popup__form');
 const addCardForm = document.querySelector("#add-card-form");
 const cardInputName = document.querySelector("#card-name-input");
 const cardInputLink = document.querySelector("#card-link-input");
-const buttonErase = document.querySelector('.popup__button-close');
-const popUpImage = document.querySelector('#popup-image');
+const PopUpImage = document.querySelector('.popup__image');
+const CloseImage = document.querySelector('#close-image');
+const PopUpTitle = document.querySelector('.popup__title'); 
+
 
 
 const cards = [];
-//numero aleatorio de tarjetas que se van a agrear
 const numRandom = Math.round(Math.random() * 10, 0);
-//el contenedor donde vamos a ir agregando las tarjetas
-const cardsArea = document.querySelector (".elements");
-
-const button = document.querySelector (".button");
+const cardsArea = document.querySelector ('.elements');
+const button = document.querySelector ('.button');
 
 function toggleProfileForm() {
-    popupProfile.classList.toggle("popup_visible");
+    popupProfile.classList.toggle('popup_visible');
 }
 
 function toggleAddCardForm() {
-  popupCards.classList.toggle("popup_visible");
+  popupCards.classList.toggle('popup_visible');
 }
 
 profileFormButton.addEventListener("click", toggleProfileForm);
@@ -72,71 +71,50 @@ function handleFormSubmit(event) {
     profileForm.reset();
     toggleProfileForm();
 }
+ function togglePopUpImage(name, link){
+    PopUpImage.src = link
+    PopUpTitle.textContent= name
+    PopUpImage.classList.toggle('popup__show')
+  }
 
-profileForm.addEventListener("submit", handleFormSubmit);
+  function toggleCloseImage(){
+    PopUpImage.classList.remove('popup__show')
+  }
+
+profileForm.addEventListener('submit', handleFormSubmit);
 
 //Funcion crear tarjeta
+CloseImage.addEventListener('click', toggleCloseImage);
 
 function crearTarjeta(name, link) {
     const template = document
-    .querySelector(".template-card")
-    .content.querySelector (".element");
+    .querySelector('.template-card')
+    .content.querySelector ('.element');
     const node = template.cloneNode(true);
-    const nodeImage = node.querySelector("img");
-    const nodeText = node.querySelector("p");
-    // Definir buttonLike y button delete
-    const buttonLike = node.querySelector(".element__like");
-    const buttonDelete = node.querySelector(".element__delete");
+    const nodeImage = node.querySelector('img');
+    const nodeText = node.querySelector('p');
+    const buttonLike = node.querySelector('.element__like');
+    const buttonDelete = node.querySelector('.element__delete');
 
-    //Activar botón like
     buttonLike.addEventListener ('click', function() {
-        buttonLike.classList.toggle("element__like_active");
+        buttonLike.classList.toggle('element__like_active');
     })
 
-     //Borrado de tarjeta
+    
      buttonDelete.addEventListener('click', function() {
       node.remove();
-      }
-    );
+    });
 
-     //agregamos contenido
+    nodeImage.addEventListener('click', function(){
+      togglepopUpImage(name,link)
+   });
+
      nodeText.textContent = name;
      nodeImage.src = link;
 
-
-
-
-
-
-     //definir evento para abrir imagen emergente
-    nodeImage.addEventListener('click', function(){
-      togglepopUpImage(name,link)
-   })
-
-   //Imagenes emergentes
-   const popUpImage = node.querySelector('#popup-image');
-   const closeImage = node.querySelector('#close-image');
-   const popUpTitle = node.querySelector('.popup__title');
-
-
-   function togglepopUpImage(name, link){
-     popUpImage.src = link
-     popUpTitle.textContent= name
-     popUpImage.classList.toggle('popup__show')
-   }
-
-   function togglecloseImage(){
-     popUpImage.classList.remove('popup__show')
-
-   }
-
-   closeImage.addEventListener('click', togglecloseImage);
-   nodeImage.addEventListener('click', funtion ({
-       handleOpenImage(name, link)
-   })
+   return node;
+  }
      
-     return node;
-   }
  
    addCardForm.addEventListener("submit", function (evt) {
      evt.preventDefault();
@@ -147,7 +125,7 @@ function crearTarjeta(name, link) {
      addCardForm.reset();
  });
  
-     initialCards.forEach((values) => {
+initialCards.forEach((values) => {
        const node = crearTarjeta(values.name, values.link);
        cardsArea.append(node);
  });

@@ -70,6 +70,10 @@
     opacity: 0.6;
 }
 
+.popup__button-close_position {
+    position: absolute;
+    top: 0;
+}
 
 .popup__form {
     color: black;
@@ -80,7 +84,7 @@
 
 .popup__image {
     z-index: 100;
-    width: 300px;
+    width: 500px;
     height: 500px;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -112,10 +116,6 @@
     border: none;
 }
 
-.popup__image_big {
-    width: 100%;
-    height: auto;
-}
 
 /* mobile */
 @media screen and (max-width: 767px) and (min-width: 320px) { 

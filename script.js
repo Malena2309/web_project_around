@@ -26,7 +26,7 @@ const initialCards = [
   ]; 
 
 //variables
-const addCardButton = document.querySelector(".button_type_add-place");
+const addCardButton = document.querySelector('.button_type_add-place');
 const profileFormButton = document.querySelector('.button_type_edit-profile');
 const popupProfile = document.querySelector('.popup');
 const popupCards = document.querySelector('.popup__content_add-card');
@@ -37,12 +37,13 @@ const profileJob = document.querySelector('.profile__job');
 const inputName = document.querySelector('.popup__input_type_name');
 const inputJob = document.querySelector('.popup__input_type_job');
 const profileForm = document.querySelector('.popup__form');
-const addCardForm = document.querySelector("#add-card-form");
+const addCardForm = document.querySelector('#add-card-form');
 const cardInputName = document.querySelector("#card-name-input");
 const cardInputLink = document.querySelector("#card-link-input");
 const PopUpImage = document.querySelector('.popup__image');
 const CloseImage = document.querySelector('#close-image');
 const PopUpTitle = document.querySelector('.popup__title'); 
+const PopUpOpenImage = document.querySelector('#popup-open-image');
 
 
 
@@ -73,12 +74,12 @@ function handleFormSubmit(event) {
 }
  function togglePopUpImage(name, link){
     PopUpImage.src = link
-    PopUpTitle.textContent= name
-    PopUpImage.classList.toggle('popup__show')
+    PopUpTitle.textContent = name
+    PopUpOpenImage.classList.toggle('popup__show')
   }
 
   function toggleCloseImage(){
-    PopUpImage.classList.remove('popup__show')
+    PopUpOpenImage.classList.remove('popup__show')
   }
 
 profileForm.addEventListener('submit', handleFormSubmit);
@@ -96,6 +97,7 @@ function crearTarjeta(name, link) {
     const buttonLike = node.querySelector('.element__like');
     const buttonDelete = node.querySelector('.element__delete');
 
+
     buttonLike.addEventListener ('click', function() {
         buttonLike.classList.toggle('element__like_active');
     })
@@ -106,7 +108,7 @@ function crearTarjeta(name, link) {
     });
 
     nodeImage.addEventListener('click', function(){
-      togglepopUpImage(name,link)
+      togglePopUpImage(name,link)
    });
 
      nodeText.textContent = name;

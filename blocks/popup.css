@@ -14,6 +14,16 @@
     margin: 0;
 }
 
+.popup__edit {
+    color: black;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    align-items: left;
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+
 .popup {
     display: none;
     justify-content: center;
@@ -127,6 +137,11 @@
         z-index: 1;
         display: flex;
         flex-direction: column;
+    }
+
+    .popup__edit {
+        font-size: 18px;
+        line-height: 29px;
     }
 
     .popup__input {

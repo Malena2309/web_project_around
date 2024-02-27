@@ -24,6 +24,28 @@
     margin-bottom: 60px;
 }
 
+.popup__submit {
+    margin: 0;
+}
+
+
+.popup__submit-btn {
+    width: 358px;
+    height: 50px;
+    background-color: black;
+    cursor: pointer;
+    border-style: none;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.popup__submit-btn:hover {
+    opacity: 0.8;
+}
+
+
 .popup {
     display: none;
     justify-content: center;
@@ -143,6 +165,12 @@
         font-size: 18px;
         line-height: 29px;
     }
+
+    .popup_submit-btn {
+        width: 238px;
+        height: 46px;
+    }
+
 
     .popup__input {
         width: 238px;

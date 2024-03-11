@@ -33,6 +33,7 @@
     font-size: 33px;
     line-height: 48px;
     margin: 0;
+    overflow: hidden;
 }
 
 .profile__job{
@@ -41,6 +42,7 @@
     font-size: 18px;
     line-height: 22px;
     margin: 0;
+    overflow: hidden;
 }
 
 .profile__edit {
@@ -48,7 +50,7 @@
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
-    align-items: left;
+    align-items: flex-start;
     padding-left: 20px;
     margin-bottom: 60px;
 }

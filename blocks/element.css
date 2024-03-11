@@ -43,6 +43,7 @@
     text-align: left;
     display: flex;
     margin: 0;
+    overflow: hidden;
 }
 
 .element__like {

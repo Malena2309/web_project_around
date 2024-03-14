@@ -40,10 +40,10 @@ const profileForm = document.querySelector('.popup__form');
 const addCardForm = document.querySelector('#add-card-form');
 const cardInputName = document.querySelector("#card-name-input");
 const cardInputLink = document.querySelector("#card-link-input");
-const PopUpImage = document.querySelector('.popup__image');
-const CloseImage = document.querySelector('#close-image');
-const PopUpTitle = document.querySelector('.popup__title'); 
-const PopUpOpenImage = document.querySelector('#popup-open-image');
+const popUpImage = document.querySelector('.popup__image');
+const closeImage = document.querySelector('#close-image');
+const popUpTitle = document.querySelector('.popup__title'); 
+const popUpOpenImage = document.querySelector('#popup-open-image');
 
 
 
@@ -73,19 +73,19 @@ function handleFormSubmit(event) {
     toggleProfileForm();
 }
  function togglePopUpImage(name, link){
-    PopUpImage.src = link
-    PopUpTitle.textContent = name
-    PopUpOpenImage.classList.toggle('popup__show')
+    popUpImage.src = link
+    popUpTitle.textContent = name
+    popUpOpenImage.classList.toggle('popup__show')
   }
 
   function toggleCloseImage(){
-    PopUpOpenImage.classList.remove('popup__show')
+    popUpOpenImage.classList.remove('popup__show')
   }
 
 profileForm.addEventListener('submit', handleFormSubmit);
 
 //Funcion crear tarjeta
-CloseImage.addEventListener('click', toggleCloseImage);
+closeImage.addEventListener('click', toggleCloseImage);
 
 function crearTarjeta(name, link) {
     const template = document
